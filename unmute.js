@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
       },
       "referrerPolicy": "no-referrer-when-downgrade",
       "body": JSON.stringify({
-        "communication_disabled_until": null
+        "communication_disabled_until": Date.now()
       }),
       "method": "PATCH",
       "mode": "cors"
