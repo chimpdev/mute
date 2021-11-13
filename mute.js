@@ -18,8 +18,7 @@ exports.run = async (client, message, args) => {
     if(err) throw err;
     if(new Date(JSON.parse(data).communication_disabled_until || Date.now()).getTime() > Date.now()) return message.reply({ content: 'Bu kullanıcı zaten susturulmuş.' });
 
-    if(args[1] && (isNaN(args[1]) || !args[2] || !['saniye', 'dakika', 'saat', 'gün', 'hafta', 'yıl'].includes(args[2]))) return message.reply({ content: 'Lütfen bir süre belirtin.' });
-    if(!args[1]) args[1] = '999' && args[2] == 'yıl';
+    if(!args[1] || isNaN(args[1]) || !args[2] || !['saniye', 'dakika', 'saat', 'gün', 'hafta', 'yıl'].includes(args[2])) return message.reply({ content: 'Lütfen bir süre belirtin.' });
 
     const timeout = require('ms')(args[1]+args[2].replace('saniye', 's').replace('saat', 'h').replace('gün', 'd').replace('hafta', 'w').replace('yıl', 'y').replace('dakika', 'm'));
     if(!timeout) return message.reply({ content: 'Lütfen geçerli bir süre belirtin.' });
