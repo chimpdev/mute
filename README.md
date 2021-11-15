@@ -9,6 +9,7 @@ Discorda yeni gelecek olan özellikte bir kullanıcıya sağ tıklayıp susturma
 Komutları kendi botunuza aktardıktan sonra, **(prefix)mute @etiket süre(10 saniye)** şeklinde kullanabilirsiniz. Susturmayı açmak için ise **(prefix)unmute @etiket** yazın. Eğer bir hata oluşur ise, Instagram yada Discord üzerinden bana ulaşabilirsiniz. Ve lütfen komutu benden izinsiz paylaşmayın :)
 
 ## Not
+node-fetch modülünün 2.6.6 versiyonunu kullanın.
 Eğer komutun taslağı sizin kullandığınız taslak ile aynı değil ise düzenlemeniz gerekir.
 
 Türkiyede bu sistemi paylaşan ilk ve şu anlık tek kişiyim. Namı değmez Toasty, sistemi Türkiyede botla kullanan ilk kişi olsa da ne yazık ki kaynak kodunu paylaşma gereği duymamış. Ama merak etmeyin, ben buradayım. Bir yıldızınızı alırım :)
